@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Cache bust: 2025-01-09-16:45 Story rewrite -->
+    <!-- Cache bust: 2025-01-09-17:00 Added Welcome4Value demo -->
     <title>Can I Afford This? - Get Clear Answers to Your Heaviest Financial Questions</title>
     <meta name="description" content="Professional-grade financial planning for major life decisions. Get 10-year projections for car purchases, home buying, education, job changes, and retirement planning.">
     <meta name="keywords" content="financial planning, scenario analysis, car buying calculator, home purchase calculator, retirement planning, education funding">
@@ -20,7 +20,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
     <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
-    <link rel="stylesheet" href="styles.css?v=2025010905">
+    <link rel="stylesheet" href="styles.css?v=2025010906">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -278,6 +278,55 @@
             </div>
         </div>
     </footer>
+
+    <!-- Wealth Impact Demo Section -->
+    <section style="padding: 120px 0; background: linear-gradient(135deg, #0F1419 0%, #1A1F2B 50%, #0F1419 100%); text-align: center;">
+        <div class="container">
+            <h2 class="section-headline" style="color: #FFFFFF; margin-bottom: 1rem;">The World's First Mobile App Dedicated to</h2>
+            <h2 class="section-headline" style="color: #4CAF50; font-size: 2.5rem; margin-bottom: 3rem; font-weight: 800;">Showing the Financial Impact</h2>
+            
+            <div class="wealth-difference-demo" style="max-width: 800px; margin: 0 auto;">
+                <div class="chart-container" style="background: rgba(255,255,255,0.05); padding: 3rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(12px);">
+                    <!-- Simplified wealth chart visualization -->
+                    <div class="wealth-comparison" style="display: flex; justify-content: space-between; align-items: end; height: 220px; margin-bottom: 2.5rem; padding: 0 2rem;">
+                        <div class="wealth-bar" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="height: 120px; width: 70px; background: linear-gradient(to top, #666, #999); border-radius: 12px 12px 0 0; margin-bottom: 1.5rem; position: relative; overflow: hidden; animation: growBarGray 2s ease-out 1s both;">
+                            </div>
+                            <p style="color: #B8BCC8; font-size: 1rem; text-align: center; font-weight: 500; margin-bottom: 0.5rem;">Without Smart Decisions</p>
+                            <p style="color: #FFFFFF; font-size: 1.3rem; font-weight: 700;">$850,000</p>
+                        </div>
+                        
+                        <div style="color: #4CAF50; font-size: 2.5rem; margin: 0 3rem; font-weight: 800; align-self: center;">VS</div>
+                        
+                        <div class="wealth-bar" style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="height: 180px; width: 70px; background: linear-gradient(to top, #4CAF50, #66BB6A); border-radius: 12px 12px 0 0; margin-bottom: 1.5rem; position: relative; overflow: hidden; box-shadow: 0 0 30px rgba(76, 175, 80, 0.4); animation: growBarGreen 2s ease-out 1.5s both;">
+                            </div>
+                            <p style="color: #B8BCC8; font-size: 1rem; text-align: center; font-weight: 500; margin-bottom: 0.5rem;">With Smart Decisions</p>
+                            <p style="color: #4CAF50; font-size: 1.3rem; font-weight: 700;">$1,330,000</p>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 2rem; background: rgba(76, 175, 80, 0.15); border-radius: 16px; border: 2px solid rgba(76, 175, 80, 0.3);">
+                        <p style="color: #4CAF50; font-size: 2.2rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.02em;">+$480,000 difference</p>
+                        <p style="color: #B8BCC8; font-size: 1.1rem; font-weight: 500;">over 10 years from making informed decisions</p>
+                    </div>
+                </div>
+                
+                <p style="color: #B8BCC8; font-size: 1.2rem; margin-top: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">with easy to understand projections</p>
+            </div>
+        </div>
+    </section>
+
+    <style>
+    @keyframes growBarGray {
+        from { height: 0%; }
+        to { height: 100%; }
+    }
+    @keyframes growBarGreen {
+        from { height: 0%; }
+        to { height: 100%; }
+    }
+    </style>
 
     <script src="script.js"></script>
 </body>
