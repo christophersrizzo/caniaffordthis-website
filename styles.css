@@ -871,6 +871,21 @@ h1, h2, h3, h4 {
     margin-bottom: 3rem;
 }
 
+.hero-signup {
+    max-width: 600px;
+    margin: 2rem auto 1rem auto;
+}
+
+.hero-signup .form-group {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.hero-signup .form-benefits {
+    justify-content: center;
+    gap: 2rem;
+}
+
 .form-group {
     display: flex;
     gap: 1.5rem;

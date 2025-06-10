@@ -8,8 +8,10 @@ function scrollToSignup() {
 // Email form handling
 document.addEventListener('DOMContentLoaded', function() {
     const emailForm = document.getElementById('emailForm');
+    const heroEmailForm = document.getElementById('heroEmailForm');
     const successMessage = document.getElementById('successMessage');
     const emailInput = document.getElementById('email');
+    const heroEmailInput = document.getElementById('heroEmail');
 
     // Email validation
     function isValidEmail(email) {
@@ -42,10 +44,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // });
     }
 
-    emailForm.addEventListener('submit', function(e) {
+    // Form submission handler
+    function handleFormSubmission(e, formElement, inputElement) {
         e.preventDefault();
         
-        const email = emailInput.value.trim();
+        const email = inputElement.value.trim();
         
         if (!email) {
             alert('Please enter your email address');
@@ -61,8 +64,17 @@ document.addEventListener('DOMContentLoaded', function() {
         storeEmail(email);
         
         // Show success message
-        emailForm.style.display = 'none';
-        successMessage.style.display = 'block';
+        if (formElement === heroEmailForm) {
+            // For hero form, show inline success
+            const formGroup = formElement.querySelector('.form-group');
+            const benefits = formElement.querySelector('.form-benefits');
+            formGroup.innerHTML = '<div style="text-align: center; color: #4CAF50; font-size: 1.2rem; font-weight: 600;">🎉 You\'re In! Check your email for confirmation.</div>';
+            benefits.style.display = 'none';
+        } else {
+            // For main form, use existing success message
+            emailForm.style.display = 'none';
+            successMessage.style.display = 'block';
+        }
         
         // Track conversion (replace with your analytics)
         if (typeof gtag !== 'undefined') {
@@ -74,16 +86,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Optional: Reset form after delay
-        setTimeout(() => {
-            emailForm.style.display = 'block';
-            successMessage.style.display = 'none';
-            emailInput.value = '';
-        }, 5000);
-    });
+        if (formElement !== heroEmailForm) {
+            setTimeout(() => {
+                emailForm.style.display = 'block';
+                successMessage.style.display = 'none';
+                emailInput.value = '';
+            }, 5000);
+        }
+    }
+
+    // Add event listeners to both forms
+    if (emailForm) {
+        emailForm.addEventListener('submit', function(e) {
+            handleFormSubmission(e, emailForm, emailInput);
+        });
+    }
+
+    if (heroEmailForm) {
+        heroEmailForm.addEventListener('submit', function(e) {
+            handleFormSubmission(e, heroEmailForm, heroEmailInput);
+        });
+    }
 
     // Add some interactive elements
     
-    // Animate stats when they come into view
+    // Animate stats when they come into view (for other stat sections on the page)
     const observerOptions = {
         threshold: 0.5,
         rootMargin: '0px'
@@ -101,10 +128,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    const statsSection = document.querySelector('.hero-stats');
-    if (statsSection) {
-        statsObserver.observe(statsSection);
-    }
+    // Observe any remaining stat sections
+    const statsSections = document.querySelectorAll('.hero-stats, .stats');
+    statsSections.forEach(section => {
+        statsObserver.observe(section);
+    });
     
     // Number animation function
     function animateNumber(element) {
