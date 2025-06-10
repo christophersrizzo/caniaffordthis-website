@@ -6,7 +6,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <!-- Cache bust: 2025-01-09-17:25 FINAL CHART UPDATE -->
+    <!-- Cache bust: 2025-01-09-17:30 CHART REPOSITIONED -->
     <title>Can I Afford This? - Get Clear Answers to Your Heaviest Financial Questions</title>
     <meta name="description" content="Professional-grade financial planning for major life decisions. Get 10-year projections for car purchases, home buying, education, job changes, and retirement planning.">
     <meta name="keywords" content="financial planning, scenario analysis, car buying calculator, home purchase calculator, retirement planning, education funding">
@@ -23,7 +23,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
     <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
-    <link rel="stylesheet" href="styles.css?v=2025010908&t=1736446800">
+    <link rel="stylesheet" href="styles.css?v=2025010909&t=1736447200">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -162,6 +162,102 @@
         </div>
     </section>
 
+    <!-- Wealth Impact Demo Section -->
+    <section style="padding: 120px 0; background: linear-gradient(135deg, #0F1419 0%, #1A1F2B 50%, #0F1419 100%); text-align: center; position: relative; overflow: hidden;">
+        <div class="container">
+            <h2 class="section-headline" style="color: #FFFFFF; margin-bottom: 1rem;">The World's First Mobile App Dedicated to</h2>
+            <h2 class="section-headline" style="color: #4CAF50; font-size: 2.5rem; margin-bottom: 3rem; font-weight: 800;">Showing the Financial Impact</h2>
+            
+            <div class="wealth-difference-demo" style="max-width: 900px; margin: 0 auto;">
+                <h3 style="color: #B8BCC8; font-size: 1.4rem; margin-bottom: 3rem; font-weight: 400;">of real-life decisions</h3>
+                
+                <div class="chart-container" style="background: rgba(255,255,255,0.05); padding: 3rem 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(12px); position: relative;">
+                    
+                    <!-- Net Worth Display -->
+                    <div style="position: absolute; top: 2rem; left: 2rem; text-align: left;">
+                        <p style="color: #4CAF50; font-size: 2rem; font-weight: 700; margin: 0;">$1,330,000</p>
+                        <p style="color: #B8BCC8; font-size: 0.9rem; margin-top: 0.25rem;">10-Year Net Worth</p>
+                    </div>
+                    
+                    <!-- SVG Line Chart -->
+                    <svg width="100%" height="300" viewBox="0 0 800 300" style="margin: 3rem 0 2rem 0;">
+                        <!-- Grid lines -->
+                        <line x1="0" y1="280" x2="800" y2="280" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                        <line x1="0" y1="210" x2="800" y2="210" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                        <line x1="0" y1="140" x2="800" y2="140" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                        <line x1="0" y1="70" x2="800" y2="70" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                        
+                        <!-- Baseline path (without smart decisions) -->
+                        <path d="M 0 260 Q 100 250, 200 235 T 400 205 T 600 165 T 800 120" 
+                              fill="none" 
+                              stroke="#888" 
+                              stroke-width="3" 
+                              stroke-linecap="round"
+                              stroke-dasharray="1000"
+                              stroke-dashoffset="1000"
+                              opacity="0.9">
+                            <animate attributeName="stroke-dashoffset" 
+                                     from="1000" 
+                                     to="0" 
+                                     dur="2s" 
+                                     begin="0.5s"
+                                     fill="freeze"/>
+                        </path>
+                        
+                        <!-- Optimized path (with smart decisions) -->
+                        <path d="M 0 260 Q 100 245, 200 220 T 400 170 T 600 100 T 800 20" 
+                              fill="none" 
+                              stroke="#4CAF50" 
+                              stroke-width="4" 
+                              stroke-linecap="round"
+                              stroke-dasharray="1000"
+                              stroke-dashoffset="1000"
+                              style="filter: drop-shadow(0 0 8px rgba(76, 175, 80, 0.5));">
+                            <animate attributeName="stroke-dashoffset" 
+                                     from="1000" 
+                                     to="0" 
+                                     dur="2s" 
+                                     begin="1s"
+                                     fill="freeze"/>
+                        </path>
+                        
+                        <!-- End point markers -->
+                        <circle cx="800" cy="120" r="6" fill="#888" opacity="0">
+                            <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="2.5s" fill="freeze"/>
+                        </circle>
+                        <circle cx="800" cy="20" r="8" fill="#4CAF50" opacity="0">
+                            <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="3s" fill="freeze"/>
+                            <animate attributeName="r" from="8" to="10" dur="0.5s" begin="3s" repeatCount="indefinite" attributeType="XML" values="8;10;8"/>
+                        </circle>
+                        
+                        <!-- Labels -->
+                        <text x="720" y="115" fill="#B8BCC8" font-size="14" opacity="0">$850K
+                            <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="2.5s" fill="freeze"/>
+                        </text>
+                        <text x="720" y="15" fill="#4CAF50" font-size="16" font-weight="600" opacity="0">$1.33M
+                            <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="3s" fill="freeze"/>
+                        </text>
+                    </svg>
+                    
+                    <!-- Year labels -->
+                    <div style="display: flex; justify-content: space-between; padding: 0 2rem; margin-bottom: 2rem;">
+                        <span style="color: #666; font-size: 0.9rem;">Today</span>
+                        <span style="color: #666; font-size: 0.9rem;">Year 5</span>
+                        <span style="color: #666; font-size: 0.9rem;">Year 10</span>
+                    </div>
+                    
+                    <!-- Difference highlight -->
+                    <div style="text-align: center; padding: 2rem; background: rgba(76, 175, 80, 0.15); border-radius: 16px; border: 2px solid rgba(76, 175, 80, 0.3); opacity: 0; animation: fadeIn 0.5s ease-out 3.5s forwards;">
+                        <p style="color: #4CAF50; font-size: 2.2rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.02em;">+$480,000 difference</p>
+                        <p style="color: #B8BCC8; font-size: 1.1rem; font-weight: 500;">over 10 years from making informed decisions</p>
+                    </div>
+                </div>
+                
+                <p style="color: #B8BCC8; font-size: 1.2rem; margin-top: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">with easy to understand projections</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Problem Section -->
     <section class="questions-section" style="padding: 120px 0; background: #0A0D14; text-align: center;">
         <div class="container">
@@ -281,102 +377,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Wealth Impact Demo Section -->
-    <section style="padding: 120px 0; background: linear-gradient(135deg, #0F1419 0%, #1A1F2B 50%, #0F1419 100%); text-align: center; position: relative; overflow: hidden;">
-        <div class="container">
-            <h2 class="section-headline" style="color: #FFFFFF; margin-bottom: 1rem;">The World's First Mobile App Dedicated to</h2>
-            <h2 class="section-headline" style="color: #4CAF50; font-size: 2.5rem; margin-bottom: 3rem; font-weight: 800;">Showing the Financial Impact</h2>
-            
-            <div class="wealth-difference-demo" style="max-width: 900px; margin: 0 auto;">
-                <h3 style="color: #B8BCC8; font-size: 1.4rem; margin-bottom: 3rem; font-weight: 400;">of real-life decisions</h3>
-                
-                <div class="chart-container" style="background: rgba(255,255,255,0.05); padding: 3rem 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(12px); position: relative;">
-                    
-                    <!-- Net Worth Display -->
-                    <div style="position: absolute; top: 2rem; left: 2rem; text-align: left;">
-                        <p style="color: #4CAF50; font-size: 2rem; font-weight: 700; margin: 0;">$1,330,000</p>
-                        <p style="color: #B8BCC8; font-size: 0.9rem; margin-top: 0.25rem;">10-Year Net Worth</p>
-                    </div>
-                    
-                    <!-- SVG Line Chart -->
-                    <svg width="100%" height="300" viewBox="0 0 800 300" style="margin: 3rem 0 2rem 0;">
-                        <!-- Grid lines -->
-                        <line x1="0" y1="280" x2="800" y2="280" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-                        <line x1="0" y1="210" x2="800" y2="210" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-                        <line x1="0" y1="140" x2="800" y2="140" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-                        <line x1="0" y1="70" x2="800" y2="70" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-                        
-                        <!-- Baseline path (without smart decisions) -->
-                        <path d="M 0 260 Q 100 250, 200 235 T 400 205 T 600 165 T 800 120" 
-                              fill="none" 
-                              stroke="#888" 
-                              stroke-width="3" 
-                              stroke-linecap="round"
-                              stroke-dasharray="1000"
-                              stroke-dashoffset="1000"
-                              opacity="0.9">
-                            <animate attributeName="stroke-dashoffset" 
-                                     from="1000" 
-                                     to="0" 
-                                     dur="2s" 
-                                     begin="0.5s"
-                                     fill="freeze"/>
-                        </path>
-                        
-                        <!-- Optimized path (with smart decisions) -->
-                        <path d="M 0 260 Q 100 245, 200 220 T 400 170 T 600 100 T 800 20" 
-                              fill="none" 
-                              stroke="#4CAF50" 
-                              stroke-width="4" 
-                              stroke-linecap="round"
-                              stroke-dasharray="1000"
-                              stroke-dashoffset="1000"
-                              style="filter: drop-shadow(0 0 8px rgba(76, 175, 80, 0.5));">
-                            <animate attributeName="stroke-dashoffset" 
-                                     from="1000" 
-                                     to="0" 
-                                     dur="2s" 
-                                     begin="1s"
-                                     fill="freeze"/>
-                        </path>
-                        
-                        <!-- End point markers -->
-                        <circle cx="800" cy="120" r="6" fill="#888" opacity="0">
-                            <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="2.5s" fill="freeze"/>
-                        </circle>
-                        <circle cx="800" cy="20" r="8" fill="#4CAF50" opacity="0">
-                            <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="3s" fill="freeze"/>
-                            <animate attributeName="r" from="8" to="10" dur="0.5s" begin="3s" repeatCount="indefinite" attributeType="XML" values="8;10;8"/>
-                        </circle>
-                        
-                        <!-- Labels -->
-                        <text x="720" y="115" fill="#B8BCC8" font-size="14" opacity="0">$850K
-                            <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="2.5s" fill="freeze"/>
-                        </text>
-                        <text x="720" y="15" fill="#4CAF50" font-size="16" font-weight="600" opacity="0">$1.33M
-                            <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="3s" fill="freeze"/>
-                        </text>
-                    </svg>
-                    
-                    <!-- Year labels -->
-                    <div style="display: flex; justify-content: space-between; padding: 0 2rem; margin-bottom: 2rem;">
-                        <span style="color: #666; font-size: 0.9rem;">Today</span>
-                        <span style="color: #666; font-size: 0.9rem;">Year 5</span>
-                        <span style="color: #666; font-size: 0.9rem;">Year 10</span>
-                    </div>
-                    
-                    <!-- Difference highlight -->
-                    <div style="text-align: center; padding: 2rem; background: rgba(76, 175, 80, 0.15); border-radius: 16px; border: 2px solid rgba(76, 175, 80, 0.3); opacity: 0; animation: fadeIn 0.5s ease-out 3.5s forwards;">
-                        <p style="color: #4CAF50; font-size: 2.2rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.02em;">+$480,000 difference</p>
-                        <p style="color: #B8BCC8; font-size: 1.1rem; font-weight: 500;">over 10 years from making informed decisions</p>
-                    </div>
-                </div>
-                
-                <p style="color: #B8BCC8; font-size: 1.2rem; margin-top: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">with easy to understand projections</p>
-            </div>
-        </div>
-    </section>
 
     <style>
     @keyframes fadeIn {
