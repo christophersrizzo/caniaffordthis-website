@@ -882,8 +882,10 @@ h1, h2, h3, h4 {
 }
 
 .hero-signup .form-benefits {
+    display: flex;
     justify-content: center;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .form-group {
@@ -894,7 +896,7 @@ h1, h2, h3, h4 {
     align-items: stretch;
 }
 
-#email {
+#email, #heroEmail {
     flex: 1;
     min-width: 280px;
     padding: 20px 24px;
@@ -908,11 +910,11 @@ h1, h2, h3, h4 {
     font-weight: 500;
 }
 
-#email::placeholder {
+#email::placeholder, #heroEmail::placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
 
-#email:focus {
+#email:focus, #heroEmail:focus {
     outline: none;
     border-color: rgba(76, 175, 80, 0.5);
     box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
@@ -1098,6 +1100,15 @@ h1, h2, h3, h4 {
     .hero-stats {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+    
+    .hero-signup .form-benefits {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero-signup .benefit {
+        font-size: 0.9rem;
     }
 }
 
