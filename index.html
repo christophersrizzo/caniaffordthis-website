@@ -51,58 +51,19 @@
                 <p class="hero-subheadline">
                     That ends today. Get clear answers to your heaviest financial questions with the world's first mobile app dedicated to showing the financial impact of real-life decisions.
                 </p>
-                <form class="signup-form hero-signup" id="heroEmailForm">
-                    <div class="form-group">
-                        <input type="email" id="heroEmail" name="email" placeholder="Enter your email address" required>
-                        <button type="submit" class="submit-button">Get Early Access</button>
-                    </div>
-                    <div class="form-benefits">
-                        <div class="benefit">✅ No credit card required</div>
-                        <div class="benefit">✅ Launch notification only</div>
-                        <div class="benefit">✅ Unsubscribe anytime</div>
-                    </div>
-                </form>
+                <button class="hero-cta" onclick="scrollToDemo()">See How It Works</button>
+                <p class="hero-disclaimer">✅ Free preview ✅ No signup required ✅ See real projections</p>
             </div>
         </div>
     </section>
 
-    <!-- Problem Section -->
-    <section class="problem">
-        <div class="container">
-            <h2 class="section-headline">Your Heaviest Financial Questions <span class="gradient-text">Finally Get Clear Answers</span></h2>
-            <div class="problem-grid">
-                <div class="problem-item">
-                    <div class="problem-icon">
-                        <img src="dreamhouse.png" alt="Dream House" style="width: 80px; height: 80px; object-fit: contain;">
-                    </div>
-                    <h3>"Can I afford to switch careers?"</h3>
-                    <p>Know exactly how that job change affects your wealth over time. Compare total compensation, benefits, transition costs and see the real financial impact before you make the leap.</p>
-                </div>
-                <div class="problem-item">
-                    <div class="problem-icon">
-                        <img src="dreamcar.png" alt="Dream Car" style="width: 80px; height: 80px; object-fit: contain;">
-                    </div>
-                    <h3>"Is it worth buying a new house?"</h3>
-                    <p>See the true cost of homeownership beyond the monthly payment. Factor in taxes, insurance, maintenance, and opportunity cost of your down payment over time.</p>
-                </div>
-                <div class="problem-item">
-                    <div class="problem-icon">
-                        <img src="graduation.png" alt="Education" style="width: 80px; height: 80px; object-fit: contain;">
-                    </div>
-                    <h3>"How will this affect my retirement?"</h3>
-                    <p>Watch how every major decision impacts your ability to retire comfortably. See the compound effect of choices you make today on your financial freedom tomorrow.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution Section -->
+    <!-- Solution Promise Section -->
     <section class="solution">
         <div class="container">
-            <h2 class="section-headline">Now You Can <span class="gradient-text">See the Future</span></h2>
+            <h2 class="section-headline">What if all of your heaviest financial questions <span class="gradient-text">could finally get clear answers?</span></h2>
             <div class="solution-content">
                 <div class="solution-text">
-                    <h3>Watch exactly what happens to your wealth over time:</h3>
+                    <h3>And give you the confidence to make informed decisions.</h3>
                     <div class="solution-features">
                         <div class="feature">
                             <div class="feature-number">📊</div>
@@ -157,14 +118,36 @@
         </div>
     </section>
 
-    <!-- Wealth Impact Demo Section -->
-    <section style="padding: 120px 0; background: linear-gradient(135deg, #0F1419 0%, #1A1F2B 50%, #0F1419 100%); text-align: center; position: relative; overflow: hidden;">
+    <!-- Problem Amplification Section -->
+    <section class="questions-section" style="padding: 120px 0; background: #0A0D14; text-align: center;">
         <div class="container">
-            <h2 class="section-headline" style="color: #FFFFFF; margin-bottom: 1rem;">The World's First Mobile App Dedicated to</h2>
-            <h2 class="section-headline" style="color: #4CAF50; font-size: 2.5rem; margin-bottom: 3rem; font-weight: 800;">Showing the Financial Impact</h2>
+            <h2 class="section-headline" style="color: #FFFFFF; margin-bottom: 3rem;">The Questions That Keep You Up at Night</h2>
+            <div class="questions-grid" style="display: grid; gap: 2.5rem; max-width: 900px; margin: 0 auto;">
+                <div style="padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 16px; border-left: 4px solid #4CAF50;">
+                    <h3 style="color: #FFFFFF; font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">"Should I take that job offer?"</h3>
+                    <p style="color: #B8BCC8; font-size: 1rem;">The salary is higher, but what about the benefits? Moving costs? Will I actually be better off?</p>
+                </div>
+                <div style="padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 16px; border-left: 4px solid #4CAF50;">
+                    <h3 style="color: #FFFFFF; font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">"Can we really afford this house?"</h3>
+                    <p style="color: #B8BCC8; font-size: 1rem;">The mortgage payment seems manageable, but what about taxes, maintenance, and everything else?</p>
+                </div>
+                <div style="padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 16px; border-left: 4px solid #4CAF50;">
+                    <h3 style="color: #FFFFFF; font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">"Will this decision ruin my retirement?"</h3>
+                    <p style="color: #B8BCC8; font-size: 1rem;">I want to make this change now, but what if it means I'll never be able to stop working?</p>
+                </div>
+            </div>
+            <p style="color: #4CAF50; font-size: 1.4rem; margin-top: 4rem; font-weight: 600;">What if you could see the answer before you decide?</p>
+        </div>
+    </section>
+
+    <!-- Value Demonstration Section -->
+    <section id="demo" style="padding: 120px 0; background: linear-gradient(135deg, #0F1419 0%, #1A1F2B 50%, #0F1419 100%); text-align: center; position: relative; overflow: hidden;">
+        <div class="container">
+            <h2 class="section-headline" style="color: #FFFFFF; margin-bottom: 1rem;">Here's exactly what happens when you</h2>
+            <h2 class="section-headline" style="color: #4CAF50; font-size: 2.5rem; margin-bottom: 3rem; font-weight: 800;">Make Informed Financial Decisions</h2>
             
             <div class="wealth-difference-demo" style="max-width: 900px; margin: 0 auto;">
-                <h3 style="color: #B8BCC8; font-size: 1.4rem; margin-bottom: 3rem; font-weight: 400;">of real-life decisions</h3>
+                <h3 style="color: #B8BCC8; font-size: 1.4rem; margin-bottom: 3rem; font-weight: 400;">Real example: Smart vs. uninformed financial choices over 10 years</h3>
                 
                 <div class="chart-container" style="background: rgba(255,255,255,0.05); padding: 3rem 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(12px); position: relative;">
                     
@@ -253,35 +236,14 @@
         </div>
     </section>
 
-    <!-- Problem Section -->
-    <section class="questions-section" style="padding: 120px 0; background: #0A0D14; text-align: center;">
-        <div class="container">
-            <h2 class="section-headline" style="color: #FFFFFF; margin-bottom: 3rem;">The Questions That Keep You Up at Night</h2>
-            <div class="questions-grid" style="display: grid; gap: 2.5rem; max-width: 900px; margin: 0 auto;">
-                <div style="padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 16px; border-left: 4px solid #4CAF50;">
-                    <h3 style="color: #FFFFFF; font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">"Should I take that job offer?"</h3>
-                    <p style="color: #B8BCC8; font-size: 1rem;">The salary is higher, but what about the benefits? Moving costs? Will I actually be better off?</p>
-                </div>
-                <div style="padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 16px; border-left: 4px solid #4CAF50;">
-                    <h3 style="color: #FFFFFF; font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">"Can we really afford this house?"</h3>
-                    <p style="color: #B8BCC8; font-size: 1rem;">The mortgage payment seems manageable, but what about taxes, maintenance, and everything else?</p>
-                </div>
-                <div style="padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 16px; border-left: 4px solid #4CAF50;">
-                    <h3 style="color: #FFFFFF; font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">"Will this decision ruin my retirement?"</h3>
-                    <p style="color: #B8BCC8; font-size: 1rem;">I want to make this change now, but what if it means I'll never be able to stop working?</p>
-                </div>
-            </div>
-            <p style="color: #4CAF50; font-size: 1.4rem; margin-top: 4rem; font-weight: 600;">What if you could see the answer before you decide?</p>
-        </div>
-    </section>
 
 
-    <!-- Email Capture Section -->
+    <!-- Final Call to Action Section -->
     <section class="signup" id="signup">
         <div class="container">
             <div class="signup-content">
-                <h2 class="signup-headline">Stop Wondering. <span class="gradient-text">Start Knowing.</span></h2>
-                <p class="signup-subheadline">Get early access to the app that turns your biggest financial questions into clear, confident answers</p>
+                <h2 class="signup-headline">Ready to Stop Guessing? <span class="gradient-text">Get Early Access</span></h2>
+                <p class="signup-subheadline">Join the waitlist for the app that finally gives you the financial map you've been missing</p>
                 
                 <form class="signup-form" id="emailForm">
                     <div class="form-group">

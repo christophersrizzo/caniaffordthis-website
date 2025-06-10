@@ -1,6 +1,12 @@
-// Smooth scrolling to signup section
+// Smooth scrolling to sections
 function scrollToSignup() {
     document.getElementById('signup').scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+function scrollToDemo() {
+    document.getElementById('demo').scrollIntoView({
         behavior: 'smooth'
     });
 }
