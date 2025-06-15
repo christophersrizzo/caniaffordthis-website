@@ -1,4 +1,4 @@
-/* Reset and Base Styles - Cache Bust 2025-01-15 v11 HERO TAGLINE UPDATE */
+/* Reset and Base Styles - Cache Bust 2025-01-15 v12 HERO ENDS TODAY */
 * {
     margin: 0;
     padding: 0;
@@ -203,13 +203,26 @@ h1, h2, h3, h4 {
 .hero-tagline {
     font-size: clamp(2rem, 3.5vw, 3rem);
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     letter-spacing: -0.02em;
     line-height: 1.2;
     animation: fadeInUp 1.2s ease-out;
+}
+
+.hero-tagline-end {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 2.5rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: #FFFFFF;
+    animation: fadeInUp 1.4s ease-out;
 }
 
 .hero-subheadline {
@@ -255,7 +268,12 @@ h1, h2, h3, h4 {
     
     .hero-tagline {
         font-size: clamp(1.5rem, 6vw, 2rem);
-        margin-bottom: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .hero-tagline-end {
+        font-size: clamp(2rem, 7vw, 2.5rem);
+        margin-bottom: 2rem;
     }
     
     .hero-subheadline {
