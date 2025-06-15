@@ -1,4 +1,4 @@
-/* Reset and Base Styles - Cache Bust 2025-01-15 v10 LOGO SIZE UPDATE */
+/* Reset and Base Styles - Cache Bust 2025-01-15 v11 HERO TAGLINE UPDATE */
 * {
     margin: 0;
     padding: 0;
@@ -200,6 +200,18 @@ h1, h2, h3, h4 {
     50% { filter: brightness(1.1); }
 }
 
+.hero-tagline {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    animation: fadeInUp 1.2s ease-out;
+}
+
 .hero-subheadline {
     font-size: clamp(1.25rem, 2.5vw, 1.625rem);
     margin-bottom: 4rem;
@@ -239,6 +251,11 @@ h1, h2, h3, h4 {
     
     .hero-headline .highlight {
         font-size: 1.05em;
+    }
+    
+    .hero-tagline {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        margin-bottom: 1.5rem;
     }
     
     .hero-subheadline {
