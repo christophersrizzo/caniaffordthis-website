@@ -1,4 +1,4 @@
-/* Reset and Base Styles - Cache Bust 2025-01-15 v14 HERO EMAIL SIGNUP */
+/* Reset and Base Styles - Cache Bust 2025-01-15 v15 HERO TEXT REFINEMENT */
 * {
     margin: 0;
     padding: 0;
@@ -172,14 +172,14 @@ h1, h2, h3, h4 {
 
 .hero-headline > span:first-child {
     font-weight: 600;
-    font-size: 0.85em;
+    font-size: 0.65em;
     opacity: 1;
     animation: fadeInUp 0.8s ease-out;
 }
 
 .hero-headline > span:nth-child(2) {
     font-weight: 700;
-    font-size: 0.9em;
+    font-size: 0.7em;
     margin-bottom: 0.5em;
     animation: fadeInUp 1s ease-out;
 }
@@ -202,8 +202,8 @@ h1, h2, h3, h4 {
 
 .hero-tagline {
     font-size: clamp(2rem, 3.5vw, 3rem);
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -213,7 +213,7 @@ h1, h2, h3, h4 {
 }
 
 .hero-tagline-end {
-    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-size: clamp(2.5rem, 2vw, 4.5rem);
     font-weight: 900;
     margin-bottom: 2rem;
     max-width: 1200px;
@@ -223,7 +223,6 @@ h1, h2, h3, h4 {
     line-height: 1;
     color: #FFFFFF;
     animation: fadeInUp 1.4s ease-out;
-    text-transform: uppercase;
 }
 
 .hero-subheadline {
@@ -348,7 +347,6 @@ h1, h2, h3, h4 {
         font-size: clamp(2.5rem, 8vw, 3rem);
         margin-bottom: 1.5rem;
         font-weight: 900;
-        text-transform: uppercase;
     }
     
     .hero-subheadline {
