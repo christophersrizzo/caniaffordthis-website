@@ -143,10 +143,55 @@ h1, h2, h3, h4 {
     50% { transform: translate(-10%, -10%) scale(1.1); opacity: 0.8; }
 }
 
+.hero-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 1200px) {
+    .hero-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .hero-visual {
+        order: -1;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .hero-headline,
+    .hero-tagline,
+    .hero-tagline-end,
+    .hero-subheadline {
+        text-align: center;
+    }
+    
+    .hero-signup-form {
+        margin: 0 auto;
+    }
+}
+
 .hero-content {
     position: relative;
     z-index: 2;
     animation: fadeInUp 1s ease-out;
+}
+
+.hero-visual {
+    position: relative;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.hero-graphic {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.5));
+    border-radius: 12px;
 }
 
 @keyframes fadeInUp {
@@ -155,14 +200,12 @@ h1, h2, h3, h4 {
 }
 
 .hero-headline {
-    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    font-size: clamp(3rem, 5vw, 5rem);
     font-weight: 300;
     margin-bottom: 1.5rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
     letter-spacing: -0.04em;
     line-height: 0.95;
+    text-align: left;
 }
 
 .hero-headline > span {
@@ -201,46 +244,39 @@ h1, h2, h3, h4 {
 }
 
 .hero-tagline {
-    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-size: clamp(1.75rem, 2.5vw, 2.5rem);
     font-weight: 900;
     margin-bottom: 1.5rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
     letter-spacing: -0.02em;
     line-height: 1.2;
     animation: fadeInUp 1.2s ease-out;
+    text-align: left;
 }
 
 .hero-tagline-end {
-    font-size: clamp(2.5rem, 2vw, 4.5rem);
+    font-size: clamp(2rem, 3vw, 3.5rem);
     font-weight: 900;
     margin-bottom: 2rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
     letter-spacing: -0.04em;
     line-height: 1;
     color: #FFFFFF;
     animation: fadeInUp 1.4s ease-out;
+    text-align: left;
 }
 
 .hero-subheadline {
-    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    font-size: clamp(1.125rem, 1.5vw, 1.25rem);
     margin-bottom: 3rem;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
     font-weight: 400;
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.8);
     letter-spacing: 0.01em;
     animation: fadeInUp 1.4s ease-out;
+    text-align: left;
 }
 
 .hero-signup-form {
-    max-width: 700px;
-    margin: 0 auto;
+    max-width: 600px;
 }
 
 .hero-signup-form .form-group {
