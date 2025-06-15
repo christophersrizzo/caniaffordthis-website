@@ -1,4 +1,4 @@
-/* Reset and Base Styles - Cache Bust 2025-01-09 v8 AGGRESSIVE REFRESH */
+/* Reset and Base Styles - Cache Bust 2025-01-15 v9 LOGO UPDATE */
 * {
     margin: 0;
     padding: 0;
@@ -118,8 +118,8 @@ h1, h2, h3, h4 {
 
 /* Hero Section */
 .hero {
-    padding: 140px 0 120px;
-    background: linear-gradient(135deg, #0A0D14 0%, #1A1F2B 50%, #0A0D14 100%);
+    padding: 180px 0 140px;
+    background: linear-gradient(180deg, #0A0D14 0%, #0F1319 100%);
     color: white;
     text-align: center;
     position: relative;
@@ -129,51 +129,88 @@ h1, h2, h3, h4 {
 .hero:before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        radial-gradient(circle at 20% 20%, rgba(76, 175, 80, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(76, 175, 80, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 60%, rgba(76, 175, 80, 0.05) 0%, transparent 50%);
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(76, 175, 80, 0.08) 0%, transparent 40%);
+    animation: heroGlow 20s ease-in-out infinite;
     pointer-events: none;
+}
+
+@keyframes heroGlow {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+    50% { transform: translate(-10%, -10%) scale(1.1); opacity: 0.8; }
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .hero-headline {
-    font-size: clamp(3rem, 6vw, 5.5rem);
-    font-weight: 800;
-    margin-bottom: 2rem;
-    max-width: 1000px;
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    font-weight: 300;
+    margin-bottom: 3rem;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    letter-spacing: -0.03em;
-    line-height: 1.05;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
 }
 
-.hero-headline .gradient-text {
-    display: inline-block;
-    background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 50%, #81C784 100%);
+.hero-headline > span {
+    display: block;
+    margin-bottom: 0.2em;
+}
+
+.hero-headline > span:first-child {
+    font-weight: 200;
+    font-size: 0.85em;
+    opacity: 0.9;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-headline > span:nth-child(2) {
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-bottom: 0.3em;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-headline .highlight {
+    display: block;
+    font-weight: 700;
+    font-size: 1.1em;
+    background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 30%, #81C784 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: fadeInUp 1.2s ease-out, highlightGlow 3s ease-in-out infinite;
+}
+
+@keyframes highlightGlow {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.1); }
 }
 
 .hero-subheadline {
-    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-    margin-bottom: 3rem;
-    max-width: 800px;
+    font-size: clamp(1.25rem, 2.5vw, 1.625rem);
+    margin-bottom: 4rem;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0.85;
-    font-weight: 400;
-    line-height: 1.4;
-    color: #B8BCC8;
+    font-weight: 300;
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.01em;
+    animation: fadeInUp 1.4s ease-out;
 }
 
 .hero-stats {
@@ -187,6 +224,39 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
+    .hero {
+        padding: 140px 0 100px;
+    }
+    
+    .hero-headline {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+        margin-bottom: 2rem;
+    }
+    
+    .hero-headline > span {
+        margin-bottom: 0.15em;
+    }
+    
+    .hero-headline .highlight {
+        font-size: 1.05em;
+    }
+    
+    .hero-subheadline {
+        font-size: 1.125rem;
+        margin-bottom: 3rem;
+        padding: 0 1rem;
+    }
+    
+    .hero-cta {
+        padding: 20px 48px;
+        font-size: 1rem;
+    }
+    
+    .hero-disclaimer {
+        font-size: 0.75rem;
+        gap: 1rem;
+    }
+    
     .hero-stats {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -231,16 +301,18 @@ h1, h2, h3, h4 {
     background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
     color: white;
     border: none;
-    padding: 20px 40px;
-    border-radius: 16px;
-    font-weight: 700;
-    font-size: 1.2rem;
+    padding: 24px 56px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    letter-spacing: 0.02em;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 8px 32px rgba(76, 175, 80, 0.3);
+    box-shadow: 0 4px 24px rgba(76, 175, 80, 0.25);
+    animation: fadeInUp 1.6s ease-out;
 }
 
 .hero-cta:before {
@@ -259,32 +331,35 @@ h1, h2, h3, h4 {
 }
 
 .hero-cta:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 16px 48px rgba(76, 175, 80, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 36px rgba(76, 175, 80, 0.35);
 }
 
 .hero-disclaimer {
-    font-size: 0.95rem;
-    color: #B8BCC8;
-    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem;
     flex-wrap: wrap;
+    animation: fadeInUp 1.8s ease-out;
+    font-weight: 400;
+    letter-spacing: 0.03em;
 }
 
 .hero-disclaimer span {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-weight: 500;
 }
 
 .hero-disclaimer span:before {
     content: '✓';
     color: #4CAF50;
     font-weight: 700;
+    opacity: 0.8;
 }
 
 /* Problem Section */
