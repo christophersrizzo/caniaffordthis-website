@@ -1,4 +1,4 @@
-/* Reset and Base Styles - Cache Bust 2025-01-15 v12 HERO ENDS TODAY */
+/* Reset and Base Styles - Cache Bust 2025-01-15 v13 HERO IMPACT UPDATE */
 * {
     margin: 0;
     padding: 0;
@@ -157,7 +157,7 @@ h1, h2, h3, h4 {
 .hero-headline {
     font-size: clamp(3.5rem, 7vw, 6.5rem);
     font-weight: 300;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -171,16 +171,16 @@ h1, h2, h3, h4 {
 }
 
 .hero-headline > span:first-child {
-    font-weight: 200;
+    font-weight: 600;
     font-size: 0.85em;
-    opacity: 0.9;
+    opacity: 1;
     animation: fadeInUp 0.8s ease-out;
 }
 
 .hero-headline > span:nth-child(2) {
-    font-weight: 400;
+    font-weight: 700;
     font-size: 0.9em;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.5em;
     animation: fadeInUp 1s ease-out;
 }
 
@@ -203,7 +203,7 @@ h1, h2, h3, h4 {
 .hero-tagline {
     font-size: clamp(2rem, 3.5vw, 3rem);
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -213,27 +213,28 @@ h1, h2, h3, h4 {
 }
 
 .hero-tagline-end {
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
-    font-weight: 800;
-    margin-bottom: 2.5rem;
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 900;
+    margin-bottom: 2rem;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
+    letter-spacing: -0.04em;
+    line-height: 1;
     color: #FFFFFF;
     animation: fadeInUp 1.4s ease-out;
+    text-transform: uppercase;
 }
 
 .hero-subheadline {
-    font-size: clamp(1.25rem, 2.5vw, 1.625rem);
-    margin-bottom: 4rem;
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    margin-bottom: 3rem;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    font-weight: 300;
-    line-height: 1.35;
-    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
     letter-spacing: 0.01em;
     animation: fadeInUp 1.4s ease-out;
 }
@@ -268,12 +269,14 @@ h1, h2, h3, h4 {
     
     .hero-tagline {
         font-size: clamp(1.5rem, 6vw, 2rem);
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.5rem;
     }
     
     .hero-tagline-end {
-        font-size: clamp(2rem, 7vw, 2.5rem);
-        margin-bottom: 2rem;
+        font-size: clamp(2.5rem, 8vw, 3rem);
+        margin-bottom: 1.5rem;
+        font-weight: 900;
+        text-transform: uppercase;
     }
     
     .hero-subheadline {
